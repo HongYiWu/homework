@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+</head>
+<body>
+
+<h1>簡易計算機</h1>
+
+<p>加減乘除</p>
+
+First number:<br>
+<input type="number" id ="var1" value="1">
+<br>
+second number:<br>
+<input type="number" id="var2" value="1">
+<br><br>
+
+<script>
+function addition() {
+    var x = parseFloat(document.getElementById("var1").value);
+    var y = parseFloat(document.getElementById("var2").value);
+    document.getElementById("demo").innerHTML  = x + y
+}
+
+function subtraction() {
+    var x = parseFloat(document.getElementById("var1").value);
+    var y = parseFloat(document.getElementById("var2").value);
+    document.getElementById("demo").innerHTML  = x - y
+}
+
+function multiplication() {
+    var x = parseFloat(document.getElementById("var1").value);
+    var y = parseFloat(document.getElementById("var2").value);
+    document.getElementById("demo").innerHTML  = x * y
+}
+
+function division() {
+   var x = parseFloat(document.getElementById("var1").value);
+    var y = parseFloat(document.getElementById("var2").value);
+    document.getElementById("demo").innerHTML  = x / y
+}
+
+</script>
+<p id="demo"></p>
+
+<button type="button" onclick="addition()">加</button>
+<button type="button" onclick="subtraction()">減</button>
+<button type="button" onclick="multiplication()">乘</button>
+<button type="button" onclick="division()">除</button>
+<button type="button" onclick="var1.value='';var2.value='';demo.innerHTML='';">C</button>
+
+</body>
+</html>
